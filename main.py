@@ -18,7 +18,7 @@ def mocked(text):
 @bot.event
 async def on_message(message):
     if message.author != bot.user:
-        await message.channel.send(mocked(message.content) + " :nerd:", reference=message)
+        await message.channel.send('"' + mocked(message.content) + '" :nerd:', reference=message)
     
 bot.run(token)
 print("Bot online.")

@@ -1,6 +1,8 @@
+from multiprocessing import Event
 import random
 import discord
 
+bot = discord.Client()
 token = "MTAyODQzNTczOTk5OTk5Nzk2Mw.G546px.JdXaRLB_5OD9ynk0FeD34dTPMspsj6WQGFZmJU"
 
 def mocked(text):
@@ -12,3 +14,11 @@ def mocked(text):
         else:
             c.append(t.upper())
     return ''.join(c)
+
+@bot.event
+async def on_message(message):
+    if message.author != bot.user:
+        print(message.author, message.content)
+    
+bot.run(token)
+print("Bot online.")

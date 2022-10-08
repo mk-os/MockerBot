@@ -1,0 +1,2 @@
+# MockerBot
+ bot that mocks

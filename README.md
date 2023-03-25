@@ -1,2 +1,2 @@
-# MockerBot
- bot that mocks
+# Mocker
+ yes
